@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.threading.MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <LinearLayout
+        android:id="@+id/llRun"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp" >
+
+        <ToggleButton
+            android:id="@+id/tbRun"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:saveEnabled="true"
+            android:textOff="Start Runnable"
+            android:textOn="Stop Runnable" />
+
+        <TextView
+            android:id="@+id/tvCountRun"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:layout_marginLeft="50dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llShared"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llRun" 
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/tvShared"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Shared Counter" 
+            android:layout_gravity="center_vertical"/>
+        
+        <TextView
+            android:id="@+id/tvCountShared"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:layout_marginLeft="50dp"
+            android:background="@android:color/holo_orange_light"
+
+            android:text="0" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/llAsynch"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llShared" 
+        android:layout_marginTop="50dp">
+
+        <ToggleButton
+            android:id="@+id/tbAsynch"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:saveEnabled="true"
+            android:textOff="Start Asynch"
+            android:textOn="Stop Asynch" />
+
+        <TextView
+            android:id="@+id/tvCountAsynch"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:layout_marginLeft="50dp"
+            android:background="@android:color/holo_orange_light"
+
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/llAsynch"
+        android:layout_below="@+id/llAsynch" 
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btReset"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:onClick="resetAll"
+            android:text="Reset All" />
+
+        <Button
+            android:id="@+id/btBoth"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:onClick="startThem"
+            android:text="Start Both" />
+        
+        <Button
+            android:id="@+id/btDelayed"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:onClick="startThem"
+            android:text="Start Delayed" />
+    </LinearLayout>
+
+</RelativeLayout>

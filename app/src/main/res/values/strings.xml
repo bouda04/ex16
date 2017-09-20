@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Threading</string>
+    <string name="hello_world">
+        This application demonstrates the interaction between the UI main thread 
+        and two \'workers\' thread that run in the background, while synchronizing with each other
+    </string>
+    <string name="action_settings">Settings</string>
+
+</resources>
